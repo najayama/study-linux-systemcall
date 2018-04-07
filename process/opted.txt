@@ -1,0 +1,26 @@
+(gdb) disass main
+Dump of assembler code for function main:
+   0x000000000000072a <+0>:     sub    rsp,0x18
+   0x000000000000072e <+4>:     mov    DWORD PTR [rsp+0xc],0x14d(333)
+   0x0000000000000736 <+12>:    lea    rdi,[rip+0x200943]        # 0x201080 <env>
+   0x000000000000073d <+19>:    call   0x5f0 <_setjmp@plt>
+   0x0000000000000742 <+24>:    test   eax,eax
+   0x0000000000000744 <+26>:    je     0x76f <main+69>
+   0x0000000000000746 <+28>:    mov    ecx,DWORD PTR [rsp+0xc]
+   0x000000000000074a <+32>:    mov    edx,0xde(222)
+   0x000000000000074f <+37>:    mov    esi,0x6f(111)
+   0x0000000000000754 <+42>:    lea    rdi,[rip+0x10d]        # 0x868
+   0x000000000000075b <+49>:    mov    eax,0x0
+   0x0000000000000760 <+54>:    call   0x5e0 <printf@plt>
+   0x0000000000000765 <+59>:    mov    edi,0x0
+   0x000000000000076a <+64>:    call   0x610 <exit@plt>
+   0x000000000000076f <+69>:    mov    DWORD PTR [rsp+0xc],0x3e7(999)
+   0x0000000000000777 <+77>:    mov    ecx,DWORD PTR [rsp+0xc]
+   0x000000000000077b <+81>:    mov    edx,0x378(888)
+   0x0000000000000780 <+86>:    mov    esi,0x309(777)
+   0x0000000000000785 <+91>:    lea    rdi,[rip+0xac]        # 0x838
+   0x000000000000078c <+98>:    call   0x5e0 <printf@plt>
+   0x0000000000000791 <+103>:   mov    esi,0x1
+   0x0000000000000796 <+108>:   lea    rdi,[rip+0x2008e3]        # 0x201080 <env>
+   0x000000000000079d <+115>:   call   0x600 <longjmp@plt>
+End of assembler dump.

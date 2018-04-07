@@ -1,0 +1,33 @@
+(gdb) disass main
+Dump of assembler code for function main:
+   0x0000000000000768 <+0>:     push   rbp
+   0x0000000000000769 <+1>:     mov    rbp,rsp
+   0x000000000000076c <+4>:     sub    rsp,0x20
+   0x0000000000000770 <+8>:     mov    DWORD PTR [rbp-0x14],edi
+   0x0000000000000773 <+11>:    mov    QWORD PTR [rbp-0x20],rsi
+   0x0000000000000777 <+15>:    mov    DWORD PTR [rbp-0x4],111
+   0x000000000000077e <+22>:    mov    DWORD PTR [rbp-0x18],222
+   0x0000000000000785 <+29>:    mov    DWORD PTR [rbp-0x8],333
+   0x000000000000078c <+36>:    lea    rdi,[rip+0x2008ed]        # 0x201080 <env>
+   0x0000000000000793 <+43>:    call   0x5f0 <_setjmp@plt>
+   0x0000000000000798 <+48>:    test   eax,eax
+   0x000000000000079a <+50>:    jne    0x7be <main+86>
+   0x000000000000079c <+52>:    mov    DWORD PTR [rbp-0x4],0x777
+   0x00000000000007a3 <+59>:    mov    esi,0x888
+   0x00000000000007a8 <+64>:    mov    DWORD PTR [rbp-0x8],0x999
+   0x00000000000007af <+71>:    mov    edx,DWORD PTR [rbp-0x8]
+   0x00000000000007b2 <+74>:    mov    eax,DWORD PTR [rbp-0x4]
+   0x00000000000007b5 <+77>:    mov    edi,eax
+   0x00000000000007b7 <+79>:    call   0x72a <doJump>
+   0x00000000000007bc <+84>:    jmp    0x7dc <main+116>
+   0x00000000000007be <+86>:    mov    edx,DWORD PTR [rbp-0x8]
+   0x00000000000007c1 <+89>:    mov    eax,DWORD PTR [rbp-0x4]
+   0x00000000000007c4 <+92>:    mov    ecx,edx
+   0x00000000000007c6 <+94>:    mov    edx,DWORD PTR [rbp-0x18]
+   0x00000000000007c9 <+97>:    mov    esi,eax
+   0x00000000000007cb <+99>:    lea    rdi,[rip+0xd6]        # 0x8a8
+   0x00000000000007d2 <+106>:   mov    eax,0x0
+   0x00000000000007d7 <+111>:   call   0x5e0 <printf@plt>
+   0x00000000000007dc <+116>:   mov    edi,0x0
+   0x00000000000007e1 <+121>:   call   0x610 <exit@plt>
+End of assembler dump.
